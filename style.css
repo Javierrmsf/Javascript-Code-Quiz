@@ -32,22 +32,8 @@ display: none;
 
 }
 
-.card2{
-display: none
+.answertext {
+    padding: 1rem;
+    background-color: blueviolet;
 }
 
-.card3{
-display: none
-}
-
-.card4{
-display: none
-}
-
-.card5{
-display: none
-}
-
-.choice0{
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-}
