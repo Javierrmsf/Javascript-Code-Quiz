@@ -55,7 +55,7 @@ let totalQuestions = questions.length; //setting total questions as the amount o
 //////////////////////////////////////////////////////
 
 function showQuestion() {
-    
+   
     let question = questions[currentquestion];
 
     questiontitle.innerHTML = question.ask;
@@ -75,6 +75,7 @@ function checkAnswer(answer) {
         score+=11; 
         alert("Correct");
     } else {
+        secondsLeft-=11;
         alert("Wrong");
     }
     scoreinscreen.innerHTML = score;
@@ -107,16 +108,27 @@ choice4.addEventListener("click", changeQuestion);
 ///////////////////////////////////////////// adding timer
 
 
- function setTime(){
-// sets interval in variable
-var timerInterval = setInterval(function() {
-    secondsLeft--;
-    timeEl.texContent = secondsLeft;
+function setTime() {
+    // Sets interval in variable
+    var timerInterval = setInterval(function() {
+      secondsLeft--;
+      timeEl.textContent = secondsLeft;
+  
+      if(secondsLeft === 0) {
+        
+       
+            localStorage.setItem('mostRecentScore', score)
+            return window.location.assign('/end.html')
+    
+    
 
- }, 1000);
+        
+      }
+  
+    }, 1000);
+  }
 
-}
 
 
 showQuestion();
-
+setTime();
