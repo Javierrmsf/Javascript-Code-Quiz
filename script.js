@@ -86,7 +86,9 @@ function checkAnswer(answer) {
 function nextQuestion() {
     currentquestion++;
     if (currentquestion === totalQuestions) {
-        alert("Quiz Over");
+        localStorage.setItem('mostRecentScore', score)
+        return window.location.assign('/endingscreen.html')
+
     } else {
         showQuestion();    
     }
@@ -118,7 +120,7 @@ function setTime() {
         
        
             localStorage.setItem('mostRecentScore', score)
-            return window.location.assign('/end.html')
+            return window.location.assign('/endingscreen.html')
     
     
 
