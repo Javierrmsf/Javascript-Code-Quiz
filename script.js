@@ -1,3 +1,6 @@
+var timeEl = document.querySelector("#timeleft");
+var secondsLeft = 75;
+
 //getting the question text from html
 let questiontitle =document.getElementById("questiontitle")
 
@@ -8,12 +11,12 @@ let choice3 =document.getElementById("C1")
 let choice4 =document.getElementById("D1")
 
 
+
 //getting the score from the html
-const scoreinscreen = document.querySelector(".scoretext")
+var scoreinscreen = document.querySelector(".scoretext")
 
 //getting the time countdown from the html
 
-const timeelement = document.querySelector(".timeleft")
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -69,26 +72,51 @@ function showQuestion() {
 
 function checkAnswer(answer) {
     if (answer === questions[currentquestion].answer) {
-        score++;
+        score+=11; 
         alert("Correct");
     } else {
         alert("Wrong");
     }
+    scoreinscreen.innerHTML = score;
+   
 }
+
 
 function nextQuestion() {
     currentquestion++;
     if (currentquestion === totalQuestions) {
         alert("Quiz Over");
     } else {
-        showQuestion();
+        showQuestion();    
     }
 }
 
+function changeQuestion(event) {
+    event.preventDefault();
+    let answer = event.target.innerHTML;
+    checkAnswer(answer);
+    nextQuestion();
+}
 
-choice1.addEventListener("click", nextQuestion);
-choice2.addEventListener("click", nextQuestion);
-choice3.addEventListener("click", nextQuestion);
-choice4.addEventListener("click", nextQuestion);
+
+choice1.addEventListener("click", changeQuestion);
+choice2.addEventListener("click", changeQuestion);
+choice3.addEventListener("click", changeQuestion);
+choice4.addEventListener("click", changeQuestion);
+
+///////////////////////////////////////////// adding timer
+
+
+ function setTime(){
+// sets interval in variable
+var timerInterval = setInterval(function() {
+    secondsLeft--;
+    timeEl.texContent = secondsLeft;
+
+ }, 1000);
+
+}
+
 
 showQuestion();
+
