@@ -25,25 +25,30 @@ var scoreinscreen = document.querySelector(".scoretext")
 
 let questions = [
 {
-ask:"what is 2 + 2",
-choices:["1","2","3","4"],
-answer: "4"
+ask:"Commonly used data types DO NOT Include:",
+choices:["1. strings","2. booleans","3. alerts","4. numbers"],
+answer: "3. alerts"
 
 },
 {
-ask:"what is 3 + 2",
-choices:["2","1","5","17"],
-answer:"5"
+ask:"The condition in an if / else statement is enclosed within______.",
+choices:["1. quotes","2. curly brackets","3. parenthesis","4. square brackets"],
+answer:"3. parenthesis"
 },
 {
-ask:"what is 4 + 2",
-choices:["6", "4", "21", "17"],
-answer:"6"
+ask:"Arrays in JavaScript can be used to store",
+choices:["1. numbers and strings", "2. other arrays", "3. booleans", "4. all of the above"],
+answer:"4. all of the above"
 },
 {
-ask:"what is 9 + 2 ",
-choices:["2","4","21","11"],
-answer:"11"
+ask:"String values must be enclosed within ____ when being assigned to variables",
+choices:["1. commas","2. curly brackets","3. quotes","4. parenthesis"],
+answer:"3. quotes"
+},
+{
+ask:"A very useful tool used during development and debugging for printing content to the debugger is:",
+choices:["1. Javascript","2. terminal/bash","3. for loops","4. console.log"],
+answer:"4. console.log"
 },
 ]
 
