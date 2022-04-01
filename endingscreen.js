@@ -19,6 +19,7 @@ finalScore.innerText = "all done, your final score is " + mostRecentScore
 function saveHighScore () {
     
 
+    
     const score = {
         score: mostRecentScore, //taking the most recent score
         name:username.value   //taking the username input
