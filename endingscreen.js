@@ -35,7 +35,7 @@ function saveHighScore () {
    
    localStorage.setItem('highScores', JSON.stringify(highScores))
 
-   window.location.assign('/highscorescreen.html')
+   window.location.assign('./highscorescreen.html')
 
 }
 

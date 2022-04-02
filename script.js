@@ -92,7 +92,7 @@ function nextQuestion() {
     currentquestion++;
     if (currentquestion === totalQuestions) {
         localStorage.setItem('mostRecentScore', score)
-        return window.location.assign('/endingscreen.html')
+        return window.location.assign('./endingscreen.html')
 
     } else {
         showQuestion();    
@@ -125,7 +125,7 @@ function setTime() {
         
        
             localStorage.setItem('mostRecentScore', score)
-            return window.location.assign('/endingscreen.html')
+            return window.location.assign('./endingscreen.html')
     
     
 
